@@ -1,0 +1,27 @@
+# panel font color
+style "panelColor" { 
+	fg[NORMAL]	= "#FFFFFF"
+} 
+widget "*PanelWidget*" style "panelColor"
+#widget "*Applet*" style "panelColor"
+widget_class "*PanelApplet*" style "panelColor"
+
+# disable ubuntu resize grip handle
+style "default-style"
+{
+	GtkWindow::resize-grip-height = 0
+	GtkWindow::resize-grip-width = 0
+}
+class "GtkWidget" style "default-style"
+
+# rebind pidgin send
+binding "pidgin-bindings" {
+	bind "Return" { "insert-at-cursor" ("\n") }
+	bind "<ctrl>r" { "format_function_clear" () }
+}
+widget "*pidgin_conv_entry" binding "pidgin-bindings"
+
+# This lets you edit your Pidgin key bindings from within Pidgin,
+# by hovering over a menu item and hitting a key combo.
+#gtk-can-change-accels = 1
+
