@@ -16,7 +16,7 @@ fi
 
 urxvt &
 
-DEFAULT_SESSION=mutter
+DEFAULT_SESSION=i3
 case $1 in
 	awesome|i3) exec $1 ;;
 	*) exec $DEFAULT_SESSION ;;

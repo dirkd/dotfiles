@@ -18,6 +18,8 @@ URxvt*saveLines: 32767
 URxvt*scrollBar: false
 URxvt*scrollBar_right: true
 
+URxvt*urgentOnBell: true
+
 ! extensions
 URxvt.perl-ext-common:  default,url-select
 URxvt.keysym.M-u:       perl:url-select:select_next
