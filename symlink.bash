@@ -30,15 +30,9 @@ done
 
 lndir=$(pwd | sed -e 's?'$HOME'/??')
 
-for f in .[a-zA-Z0-9]*; do
-	case $f in
-		.gitignore|.gitmodules|.git)
-			;;
-		*)
-			[ $verbose == "yes" ] && echo "Linking $HOME/$f to $lndir/$f..."
-			ln -ns $forceln "$lndir/$f" "$HOME"
-			;;
-	esac
+for f in *; do
+	[ $verbose == "yes" ] && echo "Linking $HOME/.$f to $lndir/$f..."
+	ln -ns $forceln "$lndir/$f" "$HOME/.$f"
 done
 
 exit 0
