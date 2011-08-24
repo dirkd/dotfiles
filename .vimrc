@@ -13,7 +13,9 @@ syntax on
 colorscheme wombat256mod
 
 if has('gui_running')
-	set guioptions-=mTr "disable menu, toolbar and always-on right scrollbar
+	set guioptions-=m "disable menu
+	set guioptions-=T "disable toolbar
+	set guioptions-=r "disable always-on right scrollbar
 else
 	set t_Co=256 "force 256 terminal colors
 	set background=dark
