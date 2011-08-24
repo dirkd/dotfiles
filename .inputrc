@@ -63,8 +63,8 @@ $include /etc/inputrc
 # glob-list-expansions (not bound)
 # history-and-alias-expand-line (not bound)
 # history-expand-line (not bound)
-# history-search-backward (not bound)
-# history-search-forward (not bound)
+"\e[A": history-search-backward
+"\e[B": history-search-forward
 # insert-comment (not bound)
 # insert-completions (not bound)
 # insert-last-argument (not bound)
@@ -76,7 +76,7 @@ $include /etc/inputrc
 "\C-n": menu-complete
 "\C-p": menu-complete-backward
 "\eOB": next-history
-"\e[B": next-history
+"\e[1;5B": next-history
 # non-incremental-forward-search-history (not bound)
 # non-incremental-forward-search-history-again (not bound)
 # non-incremental-reverse-search-history (not bound)
@@ -91,7 +91,7 @@ $include /etc/inputrc
 # possible-username-completions (not bound)
 # possible-variable-completions (not bound)
 "\eOA": previous-history
-"\e[A": previous-history
+"\e[1;5A": previous-history
 "\C-v": quoted-insert
 # redraw-current-line (not bound)
 # re-read-init-file (not bound)
@@ -405,3 +405,7 @@ $include /etc/inputrc
 # yank-last-arg (not bound)
 # yank-nth-arg (not bound)
 # yank-pop (not bound)
+
+$if Bash
+" ": magic-space
+$endif
