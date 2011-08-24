@@ -14,6 +14,9 @@ HISTCONTROL=ignoreboth
 # append to the history file, don't overwrite it
 shopt -s histappend
 
+# append to history whenever prompt is displayed
+PROMPT_COMMAND='history -a'
+
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=10000
 HISTFILESIZE=50000
@@ -115,6 +118,11 @@ fi
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
+fi
+
+# source host-specific configuration
+if [ -f ~/.bashrc.host ]; then
+	. ~/.bashrc.host
 fi
 
 # enable vi line editing
