@@ -1,1 +1,1 @@
-.xsession
+xsession
