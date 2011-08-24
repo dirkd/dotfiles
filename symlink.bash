@@ -31,6 +31,7 @@ done
 lndir=$(pwd | sed -e 's?'$HOME'/??')
 
 for f in *; do
+	if [ "$f" == "symlink.bash" ]; then continue; fi
 	[ $verbose == "yes" ] && echo "Linking $HOME/.$f to $lndir/$f..."
 	ln -ns $forceln "$lndir/$f" "$HOME/.$f"
 done
