@@ -5,6 +5,9 @@ if [ -x /usr/bin/lsb_release ]; then
   if [[ "$(lsb_release -i)" == *Arch ]]; then
     alias remdeps='pacman -Rs $(pacman -Qtdq)'
     alias dist-upgrade='pacman -Syu'
+  elif [[ "$(lsb_release -i)" == *Ubuntu ]]; then
+    alias remdeps='apt-get autoremove'
+    alias dist-upgrade='apt-get update && apt-get dist-upgrade'
   fi
 fi
 
