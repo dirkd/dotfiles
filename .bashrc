@@ -5,11 +5,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# set up environment variables
-if [ -f "$HOME/.envvars" ]; then
-	. "$HOME/.envvars"
-fi
-
 # don't put duplicate lines in the history. See bash(1) for more options
 # don't overwrite GNU Midnight Commander's setting of `ignorespace'.
 #HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
