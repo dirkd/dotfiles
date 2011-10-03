@@ -69,11 +69,11 @@ __vcs_ps1() {
 	local fmt=${1:- (%s)}
 
 	local gitps1=$(__git_ps1 "${fmt}")
-	echo "$gitps1"
+	echo -n "$gitps1"
 
 	if [ -d ".svn" ]; then
 		local svnps1=$(__svn_ps1 "${fmt}")
-		echo "$svnps1"
+		echo -n "$svnps1"
 	fi
 }
 GIT_PS1_SHOWDIRTYSTATE=1

@@ -1,7 +1,7 @@
 set nocompatible "do not use vi compatibiliy
 set ttyfast
 
-set smartindent "auto indent new lines
+set nosmartindent "auto indent new lines
 set encoding=utf-8 "text encoding
 set number "show line numbers
 set title "set xterm title
