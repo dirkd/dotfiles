@@ -31,12 +31,12 @@ shopt -s checkwinsize
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
-    debian_chroot=$(cat /etc/debian_chroot)
+	debian_chroot=$(cat /etc/debian_chroot)
 fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    *color) color_prompt=yes;;
+	*color) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -49,10 +49,10 @@ if [ -z "$color_prompt" -a -n "$force_color_prompt" ]; then
 	# We have color support; assume it's compliant with Ecma-48
 	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
 	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
-    else
-	color_prompt=
-    fi
+		color_prompt=yes
+	else
+		color_prompt=
+	fi
 fi
 
 __svn_ps1() {
@@ -89,17 +89,17 @@ if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}'"${color_username_root:-\[\033[01;33m\]}"'\u@\h\[\033[00m\] \[\033[01;34m\]\w\[\033[00m\]$(__vcs_ps1 " (\[\033[01;35m\]%s\[\033[00m\])")\n'"${color_username_root}"'\$\[\033[00m\] '
 	unset color_username_root
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h \w$(__vcs_ps1 " (%s)")\n\$ '
+	PS1='${debian_chroot:+($debian_chroot)}\u@\h \w$(__vcs_ps1 " (%s)")\n\$ '
 fi
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h \w\a\]$PS1"
-    ;;
+	PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h \w\a\]$PS1"
+	;;
 *)
-    ;;
+	;;
 esac
 
 # enable color support of ls and also add handy aliases
@@ -117,12 +117,12 @@ fi
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+	. ~/.bash_aliases
 fi
 
 # source host-specific configuration
-if [ -f ~/.bashrc.host ]; then
-	. ~/.bashrc.host
+if [ -f ~/.bashrc.local ]; then
+	. ~/.bashrc.local
 fi
 
 # enable vi line editing
