@@ -1,16 +1,6 @@
 alias df='df -h'
 alias du='du -h -c'
 
-if [ -x /usr/bin/lsb_release ]; then
-  if [[ "$(lsb_release -i)" == *Arch ]]; then
-    alias remdeps='pacman -Rs $(pacman -Qtdq)'
-    alias dist-upgrade='pacman -Syu'
-  elif [[ "$(lsb_release -i)" == *Ubuntu ]]; then
-    alias remdeps='apt-get autoremove'
-    alias dist-upgrade='apt-get update && apt-get dist-upgrade'
-  fi
-fi
-
 #alias rm='rm -v'
 alias wine='padsp wine'
 alias playhd='mplayer -ao alsa -vo vdpau -vc ffh264vdpau,ffvc1vdpau,ffmpeg12vdpau -demuxer lavf -cache 8192'
