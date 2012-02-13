@@ -6,6 +6,8 @@ set encoding=utf-8 "text encoding
 set number "show line numbers
 set title "set xterm title
 
+set rtp+=$GOROOT/misc/vim
+
 call pathogen#infect() "pathogen runtimepath-handling
 
 syntax on
