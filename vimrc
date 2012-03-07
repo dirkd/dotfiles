@@ -1,3 +1,6 @@
+"
+" General
+"
 set nocompatible "do not use vi compatibiliy
 set ttyfast
 
@@ -6,12 +9,27 @@ set encoding=utf-8 "text encoding
 set number "show line numbers
 set title "set xterm title
 
-set rtp+=$GOROOT/misc/vim
+set wildmode=list:longest,full
 
-let g:SuperTabDefaultCompletionType = "context"
+set showcmd "show (partial) command in status line.
+set showmatch "show matching brackets.
+set incsearch "incremental search
+set mouse=a "enable mouse usage (all modes)
+
+"
+" Plugins
+"
+if exists('$GOROOT')
+	set rtp+=$GOROOT/misc/vim
+endif
+
+let g:SuperTabDefaultCompletionType = 'context'
 
 call pathogen#infect() "pathogen runtimepath-handling
 
+"
+" Colors & Appearance
+"
 syntax on
 
 if has('gui_running')
@@ -25,23 +43,24 @@ endif
 
 colorscheme wombat256mod
 
+"
+" Indentation
+"
 set noexpandtab "do not expand tabs to spaces
 set tabstop=4 "tabstop length in spaces
 set softtabstop=4
 set shiftwidth=4
 
-set wildmode=list:longest,full
-
-set showcmd "show (partial) command in status line.
-set showmatch "show matching brackets.
-set incsearch "incremental search
-set mouse=a "enable mouse usage (all modes)
-
+"
+" Filetype recognition
+"
 filetype plugin indent on
 
 autocmd FileType python setlocal et ts=8 tw=79
 
-"autocomplete settings
+"
+" Autocompletion
+"
 set ofu=syntaxcomplete#Complete
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
@@ -51,6 +70,8 @@ autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
 
-"template loading for new buffers
-"http://vim.runpaint.org/typing/using-templates/
+"
+" Template loading for new buffers
+" http://vim.runpaint.org/typing/using-templates/
+"
 autocmd! BufNewFile * silent! 0r ~/.vim/skel/tmpl.%:e | $d
