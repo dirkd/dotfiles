@@ -29,6 +29,11 @@ shopt -s checkwinsize
 # on debian style systems
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
+# enable bash-completion if available and not already done by the system
+if [ -z "$BASH_COMPLETION" -a -f /etc/bash_completion ]; then
+	. /etc/bash_completion
+fi
+
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
 	debian_chroot=$(cat /etc/debian_chroot)
