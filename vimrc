@@ -8,6 +8,8 @@ set title "set xterm title
 
 set rtp+=$GOROOT/misc/vim
 
+let g:SuperTabDefaultCompletionType = "context"
+
 call pathogen#infect() "pathogen runtimepath-handling
 
 syntax on
