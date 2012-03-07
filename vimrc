@@ -14,8 +14,6 @@ call pathogen#infect() "pathogen runtimepath-handling
 
 syntax on
 
-colorscheme wombat256mod
-
 if has('gui_running')
 	set guioptions-=m "disable menu
 	set guioptions-=T "disable toolbar
@@ -24,6 +22,8 @@ else
 	set t_Co=256 "force 256 terminal colors
 	set background=dark
 endif
+
+colorscheme wombat256mod
 
 set noexpandtab "do not expand tabs to spaces
 set tabstop=4 "tabstop length in spaces
