@@ -1,6 +1,7 @@
-"3.1 (created: 2011/04/21 23:26:46)
+"3.4 (created: 2012/04/02 20:07:29)
 
+set complete=l
 set defsearch=g
-source! /home/dirk/.vimperatorrc.local
+source! ~/.vimperatorrc.local
 
 " vim: set ft=vimperator:
