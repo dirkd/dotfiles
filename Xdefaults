@@ -10,6 +10,7 @@ Xcursor.size: 22
 
 ! rxvt-unicode settings
 URxvt*font: xft:DejaVu Sans Mono:size=10
+URxvt*letterSpace: -1
 URxvt*depth: 32
 URxvt*background: black
 URxvt*foreground: white
@@ -21,10 +22,11 @@ URxvt*scrollBar_right: true
 URxvt*urgentOnBell: true
 
 ! extensions
-URxvt.perl-ext-common:  default,url-select
+URxvt.perl-ext-common:  default,clipboard,url-select,keyboard-select
 URxvt.keysym.M-u:       perl:url-select:select_next
-URxvt.urlLauncher:      firefox
-URxvt.underlineURLs:    true
+URxvt.keysym.M-Escape:  perl:keyboard-select:activate
+URxvt.keysym.M-s:       perl:keyboard-select:search
+URxvt.url-select.launcher: /usr/bin/firefox
 
 ! terminal colors
 URxvt*color0: #000000
