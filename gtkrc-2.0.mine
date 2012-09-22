@@ -2,17 +2,7 @@
 style "panelColor" { 
 	fg[NORMAL]	= "#FFFFFF"
 } 
-widget "*PanelWidget*" style "panelColor"
-#widget "*Applet*" style "panelColor"
-widget_class "*PanelApplet*" style "panelColor"
-
-# disable ubuntu resize grip handle
-style "default-style"
-{
-	GtkWindow::resize-grip-height = 0
-	GtkWindow::resize-grip-width = 0
-}
-class "GtkWidget" style "default-style"
+widget "*Panel*" style "panelColor"
 
 # rebind pidgin send
 binding "pidgin-bindings" {
