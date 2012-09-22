@@ -70,6 +70,10 @@ __svn_ps1() {
 	fi
 }
 
+if [ -r /usr/share/git/completion/git-prompt.sh ]; then
+	. /usr/share/git/completion/git-prompt.sh
+fi
+
 __vcs_ps1() {
 	local fmt=${1:- (%s)}
 
