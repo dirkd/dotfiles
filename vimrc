@@ -46,8 +46,8 @@ colorscheme wombat256mod
 "
 " Indentation
 "
-set noexpandtab "do not expand tabs to spaces
-set tabstop=4 "tabstop length in spaces
+set expandtab "expand tabs to spaces
+set tabstop=8 "tabstop length in spaces
 set softtabstop=4
 set shiftwidth=4
 
