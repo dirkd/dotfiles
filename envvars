@@ -14,13 +14,9 @@ if [ -d "$HOME/bin" ] && echo $PATH | grep -vq "$HOME/bin"; then
     PATH="$HOME/bin:$PATH"
 fi
 
-# environment variables for the go programming language
-# http://golang.org
-GOROOT="$HOME/go"
-GOOS="linux"
-GOARCH="amd64"
+# golang
+export GOROOT=$HOME/go
 
 if [ -d "$GOROOT/bin" ] && echo $PATH | grep -vq "$GOROOT/bin"; then
-	PATH="$PATH:$GOROOT/bin"
-	export GOROOT GOOS GOARCH
+    PATH="$PATH:$GOROOT/bin"
 fi
