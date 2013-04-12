@@ -4,7 +4,6 @@
 set nocompatible "do not use vi compatibiliy
 set ttyfast
 
-set nosmartindent "auto indent new lines
 set encoding=utf-8 "text encoding
 set number "show line numbers
 set title "set xterm title
@@ -46,6 +45,7 @@ colorscheme wombat256mod
 "
 " Indentation
 "
+set nosmartindent "disable smartindent
 set expandtab "expand tabs to spaces
 set tabstop=8 "tabstop length in spaces
 set softtabstop=4
@@ -75,3 +75,13 @@ autocmd FileType c set omnifunc=ccomplete#Complete
 " http://vim.runpaint.org/typing/using-templates/
 "
 autocmd! BufNewFile * silent! 0r ~/.vim/skel/tmpl.%:e | $d
+
+"
+" Mappings
+"
+nnoremap <Tab> %
+vnoremap <Tab> %
+
+nnoremap <Leader>t :NERDTree<CR>
+
+cmap W! w !sudo tee % >/dev/null
