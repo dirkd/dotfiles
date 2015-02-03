@@ -18,10 +18,6 @@ set mouse=a "enable mouse usage (all modes)
 "
 " Plugins
 "
-if exists('$GOROOT')
-	set rtp+=$GOROOT/misc/vim
-endif
-
 call pathogen#infect() "pathogen runtimepath-handling
 
 "
@@ -77,9 +73,6 @@ autocmd! BufNewFile * silent! 0r ~/.vim/skel/tmpl.%:e | $d
 "
 " Mappings
 "
-nnoremap <Tab> %
-vnoremap <Tab> %
-
 nnoremap <Leader>t :NERDTree<CR>
 
 cmap W! w !sudo tee % >/dev/null
