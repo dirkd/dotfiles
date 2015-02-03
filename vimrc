@@ -42,15 +42,16 @@ colorscheme wombat256mod
 set nosmartindent "disable smartindent
 set expandtab "expand tabs to spaces
 set tabstop=8 "tabstop length in spaces
-set softtabstop=4
-set shiftwidth=4
+set softtabstop=4 "use 4 spaces for tabbing
+set shiftwidth=4 "width of indentation
 
 "
 " Filetype recognition
 "
 filetype plugin indent on
 
-autocmd FileType python setlocal et ts=8 tw=79
+autocmd FileType python setlocal et ts=8 sw=4 sts=4 tw=79
+autocmd FileType go setlocal noet ts=8 sw=8 sts=0 tw=79
 
 "
 " Autocompletion
