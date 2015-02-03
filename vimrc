@@ -22,8 +22,6 @@ if exists('$GOROOT')
 	set rtp+=$GOROOT/misc/vim
 endif
 
-let g:SuperTabDefaultCompletionType = 'context'
-
 call pathogen#infect() "pathogen runtimepath-handling
 
 "
