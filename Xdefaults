@@ -9,17 +9,18 @@ Xcursor.theme: Vanilla-DMZ
 Xcursor.size: 22
 
 ! rxvt-unicode settings
-URxvt*font: xft:DejaVu Sans Mono:size=10
-URxvt*letterSpace: -1
-URxvt*depth: 32
-URxvt*background: black
-URxvt*foreground: white
+URxvt.termName: rxvt-256color
+URxvt.font: xft:DejaVu Sans Mono:size=10
+URxvt.letterSpace: -1
+URxvt.depth: 32
+URxvt.background: black
+URxvt.foreground: white
 
-URxvt*saveLines: 32767
-URxvt*scrollBar: false
-URxvt*scrollBar_right: true
+URxvt.saveLines: 32767
+URxvt.scrollBar: false
+URxvt.scrollBar_right: true
 
-URxvt*urgentOnBell: true
+URxvt.urgentOnBell: true
 
 ! extensions
 URxvt.perl-ext-common:  default,clipboard,url-select,keyboard-select
@@ -29,27 +30,31 @@ URxvt.keysym.M-s:       perl:keyboard-select:search
 URxvt.url-select.launcher: /usr/bin/firefox
 
 ! terminal colors
-URxvt*color0: #000000
-URxvt*color8: #555753
-
-URxvt*color1: #CC0000
-URxvt*color9: #EF2929
-
-URxvt*color2: #4E9A06
-URxvt*color10: #8AE234
-
-URxvt*color3: #C4A000
-URxvt*color11: #FCE94F
-
-URxvt*color4: #3465A4
-URxvt*color12: #729FCF
-
-URxvt*color5: #75507B
-URxvt*color13: #AD7FA8
-
-URxvt*color6: #06989A
-URxvt*color14: #34E2E2
-
-URxvt*color7: #D3D7CF
-URxvt*color15: #EEEEEC
-
+! black
+URxvt.color0: #000000
+URxvt.color8: #555753
+! red
+URxvt.color1: #CC0000
+URxvt.color9: #EF2929
+! green
+URxvt.color2: #4E9A06
+URxvt.color10: #8AE234
+! yellow
+URxvt.color3: #C4A000
+URxvt.color11: #FCE94F
+! blue
+URxvt.color4: #3465A4
+URxvt.color12: #729FCF
+! magenta
+URxvt.color5: #75507B
+URxvt.color13: #AD7FA8
+! cyan
+URxvt.color6: #06989A
+URxvt.color14: #34E2E2
+! white
+URxvt.color7: #D3D7CF
+URxvt.color15: #EEEEEC
+! colored styles
+URxvt.colorIT: #87AF5F
+!URxvt.colorBD: #D7D7D7
+URxvt.colorUL: #87AFD7
